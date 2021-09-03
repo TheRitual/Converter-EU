@@ -1,7 +1,4 @@
-/* converter.css */
-
-.converter {
-    width: fit-content;
+.savedList {
     text-align: center;
     font-size: 20px;
     color: #305278;
@@ -9,7 +6,6 @@
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 10px 10px #00000099;
-    margin: 0 20px 100px 20px;
 }
 
 .converter__header {

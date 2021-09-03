@@ -21,7 +21,13 @@ const Form = ({ data }) => {
                 </select>
             </div>
             <div className="form__element">
-                {data.source} rate: {data.rate}
+                1&nbsp;<span className="form__code">
+                    {data.source}
+                </span>
+                &nbsp;=&nbsp;{data.rate}&nbsp;
+                <span className="form__code">
+                    {data.target}
+                </span>
             </div>
         </form>
     );

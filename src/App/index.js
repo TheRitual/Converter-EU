@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Converter from "./Converter";
+import SavedList from "./SavedList";
 import Header from "./Header";
 import Info from "./Info";
+import "./style.css";
 
 const App = () => {
   const [info, setInfo] = useState({
@@ -20,11 +22,16 @@ const App = () => {
   });
 
   return (
-    <main>
-      <Header />
-      <Converter data={data} />
+    <>
+      <main className="main">
+        <Header />
+        <section className="container">
+          <Converter data={data} />
+          <SavedList />
+        </section>
+      </main>
       <Info info={info} />
-    </main>
+    </>
   );
 }
 
