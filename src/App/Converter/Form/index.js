@@ -28,7 +28,6 @@ const Form = ({ appData, setAppData, savedList, setSavedList }) => {
             targetValue: target.value,
         });
     }
-    
 
     return (
         <form className="form" onSubmit={onSaveList}>
