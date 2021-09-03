@@ -1,0 +1,44 @@
+.form__element {
+    padding: 10px;
+}
+
+.form__select {
+    font-family: 'Dela Gothic One', cursive;
+    width: 150px;
+    text-align: center;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    color: #305278;
+}
+
+.form__select:active {
+    background-color: #305278;
+    color: #FFF;
+}
+
+.form__select:focus {
+    background-color: #305278;
+    color: #FFF;
+}
+
+.form__field {
+    font-family: 'Dela Gothic One', cursive;
+    width: 250px;
+    text-align: center;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    color: #305278;
+}
+
+.form__field:active {
+    background-color: #ebebeb;
+}
+
+.form__field:disabled {
+    background-color: #305278;
+    color: #DDD;
+}
