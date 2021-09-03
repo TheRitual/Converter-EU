@@ -1,11 +1,18 @@
+import { useState } from "react";
 import Header from "./Header";
-
-//fetch("https://api.exchangerate.host/latest").then( response => response.json()).then(jsonData => console.log(jsonData));
+import Info from "./Info";
 
 const App = () => {
+  const [info, setInfo] = useState({
+    message: "Downloading information about exchange rates",
+    isError: true,
+    showInfo: true,
+  });
+
   return (
     <main>
-      <Header />
+      <Header/>
+      <Info info={info} />
     </main>
   );
 }

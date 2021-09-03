@@ -1,0 +1,38 @@
+/* info.css */
+
+.info {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    position: fixed;
+    left: 10%;
+    bottom: 0;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+.info--hidden {
+    opacity: 0;
+}
+
+@media(max-width: 767px) {
+    .info {
+        width: 80%;
+        left: 0;
+    }
+}
+
+.info__information {
+    margin: 0;
+    height: 40px;
+    background-color: #FFF;
+    color: #005857;
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.info__information--error {
+    color: hsl(0, 100%, 30%);
+}
