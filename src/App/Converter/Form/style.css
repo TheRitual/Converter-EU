@@ -4,13 +4,15 @@
 
 .form__select {
     font-family: 'Dela Gothic One', cursive;
-    width: 150px;
+    width: 100px;
     text-align: center;
     border: #000 solid 2px;
     border-radius: 10px;
     padding: 10px;
     background-color: #FFF;
     color: #305278;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 .form__select:active {
@@ -35,10 +37,15 @@
 }
 
 .form__field:active {
-    background-color: #ebebeb;
+    background-color: #6d93be;
+}
+
+.form__field:focus {
+    background-color: #6d93be;
+    color: #FFF;
 }
 
 .form__field:disabled {
-    background-color: #305278;
+    background-color: #50647a;
     color: #DDD;
 }

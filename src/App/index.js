@@ -13,6 +13,9 @@ const App = () => {
   const [data, setData] = useState({
     source: "EUR",
     target: "PLN",
+    sourceValue: 21.37,
+    targetValue: 21.37,
+    rate: 21.37,
     isLoading: false,
   });
 
