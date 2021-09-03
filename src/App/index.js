@@ -12,7 +12,9 @@ const App = () => {
     showInfo: true,
   });
 
-  const [data, setData] = useState({
+  const [savedList, setSavedList] = useState([]);
+
+  const [appData, setAppData] = useState({
     source: "EUR",
     target: "PLN",
     sourceValue: 21.37,
@@ -26,8 +28,8 @@ const App = () => {
       <main className="main">
         <Header />
         <section className="container">
-          <Converter data={data} />
-          <SavedList />
+          <Converter appData={appData} setAppData={setAppData} savedList={savedList} setSavedList={setSavedList} />
+          <SavedList savedList={savedList} setSavedList={setSavedList} />
         </section>
       </main>
       <Info info={info} />

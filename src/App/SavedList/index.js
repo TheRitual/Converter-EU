@@ -1,26 +1,37 @@
 import "./style.css"
 
-const SavedList = (props) => {
+const SavedList = ({ savedList, setSavedList }) => {
+    const removeItem = (id) => {
+        setSavedList(savedList => savedList.filter(item => item.id !== id));
+    }
+
+    const clearList = () => {
+        setSavedList([]);
+    }
 
     return (
         <section className="savedList">
             <h2 className="savedList__header">Saved Positions</h2>
-            <button className="savedList__clearButton">Clear List</button>
+            <button className="savedList__clearButton" onClick={clearList}>Clear List</button>
             <ul className="savedList__list">
-                <li className="savedList__item">
-                    <div>
-                        <span className="savedList__value">1</span>&nbsp;
-                        <span className="savedList__code">PLN</span>&nbsp;
-                    </div>
-                    <div> ➤ </div>
-                    <div>
-                        <span className="savedList__value">21.37</span>&nbsp;
-                        <span className="savedList__code">EUR</span>&nbsp;
-                    </div>
-                    <div>
-                        <button className="savedList__removeButton">&#10006;</button>
-                    </div>
-                </li>
+                {
+                    savedList.map(item =>
+                        <li className="savedList__item" key={item.id}>
+                            <div>
+                                <span className="savedList__value">{item.sourceValue}</span>&nbsp;
+                                <span className="savedList__code">{item.source}</span>&nbsp;
+                            </div>
+                            <div> ➤ </div>
+                            <div>
+                                <span className="savedList__value">{item.targetValue}</span>&nbsp;
+                                <span className="savedList__code">{item.target}</span>&nbsp;
+                            </div>
+                            <div>
+                                <button className="savedList__removeButton" onClick={() => removeItem(item.id)}>&#10006;</button>
+                            </div>
+                        </li>
+                    )
+                }
             </ul>
         </section>
     );
