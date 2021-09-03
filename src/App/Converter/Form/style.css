@@ -57,3 +57,22 @@
     font-size: 14px;
     border-radius: 15px;
 }
+
+.form__saveButton {
+    display: block;
+    font-size: 20px;
+    margin: 15px auto;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 7px;
+    color: #305278;
+    background-color: hsl(179, 100%, 98%);
+    transition: 0.3s;
+}
+
+.form__saveButton:hover {
+    background-color: #4c85c5;
+    color: #FFF;
+    transform: scale(1.2);
+    cursor: pointer;
+}

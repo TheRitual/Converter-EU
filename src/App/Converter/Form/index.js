@@ -29,6 +29,9 @@ const Form = ({ data }) => {
                     {data.target}
                 </span>
             </div>
+            <div className="form__element">
+                <button className="form__saveButton">Save</button>
+            </div>
         </form>
     );
 }

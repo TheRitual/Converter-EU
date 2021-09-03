@@ -8,7 +8,82 @@
     box-shadow: 0 0 10px 10px #00000099;
 }
 
-.converter__header {
+.savedList__header {
     margin: 0 auto;
     padding: 20px;
+}
+
+.savedList__list {
+    list-style-type: none;
+    margin: auto;
+    padding: 0px;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.savedList__clearButton {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(92, 35, 35);
+    background-color: transparent;
+    font-size: 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.savedList__clearButton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #000;
+}
+
+.savedList__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    color: #000;
+    border-bottom: 1px #CCC solid;
+    border-top: 1px #AAA solid;
+    padding: 7px;
+    margin: auto;
+    line-height: 2.3;
+}
+
+.savedList__item:hover {
+    background-color: #def0ef;
+}
+
+.savedList__code {
+    color: #FFF;
+    background-color: #305278;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.savedList__value {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.savedList__removeButton {
+    color: rgb(92, 35, 35);
+    background-color: rgba(92, 35, 35, 0.219);
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.savedList__removeButton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: tomato;
+    color: #000;
 }
