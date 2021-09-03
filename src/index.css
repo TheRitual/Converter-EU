@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, ::after, ::before {
+    box-sizing: inherit;
+    -webkit-font-smoothing: inherit;
+}
+
+body {
+    font-family: 'Dela Gothic One', cursive;
+    background-color: #305278;
+    margin: 0px;
+    background-image: url('./img/doodle.jpg');
+    background-size: 750px;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
 }
