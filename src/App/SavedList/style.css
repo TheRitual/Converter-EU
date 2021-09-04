@@ -8,6 +8,7 @@
     box-shadow: 0 0 10px 10px #00000099;
     margin-bottom: 100px;
     transition: 1s;
+    width: fit-content;
 }
 
 .savedList__header {

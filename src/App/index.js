@@ -11,13 +11,6 @@ const App = () => {
     isError: false,
   });
 
-  const changeInfo = (information, error) => {
-    setInfo({
-      message: information,
-      isError: error,
-    });
-  }
-
   const [savedList, setSavedList] = useState([]);
 
   const [appData, setAppData] = useState({
@@ -32,6 +25,13 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   const [list, setList] = useState([]);
+
+  const changeInfo = (information, error) => {
+    setInfo({
+      message: information,
+      isError: error,
+    });
+  }
 
   const createList = (list) => {
     return Object.entries(list).map(item => {
@@ -64,7 +64,7 @@ const App = () => {
       setRate(newRate);
       setAppData({
         ...appData,
-        targetValue: appData.sourceValue * newRate,
+        targetValue: (appData.sourceValue * newRate).toFixed(2),
       });
     }
     // eslint-disable-next-line
@@ -80,7 +80,18 @@ const App = () => {
       <main className="main">
         <Header />
         <section className="container">
-          <Converter rate={rate} loading={loading} setRate={setRate} getRates={getRates} appData={appData} setAppData={setAppData} savedList={savedList} setSavedList={setSavedList} list={list} setList={setList} />
+          <Converter
+            rate={rate}
+            loading={loading}
+            setRate={setRate}
+            getRates={getRates}
+            appData={appData}
+            setAppData={setAppData}
+            savedList={savedList}
+            setSavedList={setSavedList}
+            list={list}
+            setList={setList}
+          />
           <SavedList savedList={savedList} setSavedList={setSavedList} />
         </section>
       </main>

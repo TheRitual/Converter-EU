@@ -16,3 +16,82 @@
     margin: 0 auto;
     padding: 20px;
 }
+
+.form__element {
+    padding: 10px;
+}
+
+.form__select {
+    font-family: 'Dela Gothic One', cursive;
+    width: 100px;
+    text-align: center;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    color: #305278;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.form__select:active {
+    background-color: #305278;
+    color: #FFF;
+}
+
+.form__select:focus {
+    background-color: #305278;
+    color: #FFF;
+}
+
+.form__field {
+    font-family: 'Dela Gothic One', cursive;
+    width: 250px;
+    text-align: center;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    color: #305278;
+}
+
+.form__field:active {
+    background-color: #6d93be;
+}
+
+.form__field:focus {
+    background-color: #6d93be;
+    color: #FFF;
+}
+
+.form__field:disabled {
+    background-color: #50647a;
+    color: #DDD;
+}
+
+.form__code {
+    color: #fff;
+    background-color: #305278;
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+.form__saveButton {
+    display: block;
+    font-size: 20px;
+    margin: 15px auto;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 7px;
+    color: #305278;
+    background-color: hsl(179, 100%, 98%);
+    transition: 0.3s;
+}
+
+.form__saveButton:hover {
+    background-color: #4c85c5;
+    color: #FFF;
+    transform: scale(1.2);
+    cursor: pointer;
+}
