@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/converter-eu/static/css/main.61e56d30.chunk.css",
+    "main.css": "/converter-eu/static/css/main.9e8dfb06.chunk.css",
     "main.js": "/converter-eu/static/js/main.5608384b.chunk.js",
     "main.js.map": "/converter-eu/static/js/main.5608384b.chunk.js.map",
     "runtime-main.js": "/converter-eu/static/js/runtime-main.2de9c2b0.js",
@@ -10,14 +10,14 @@
     "static/js/3.e286e2c7.chunk.js": "/converter-eu/static/js/3.e286e2c7.chunk.js",
     "static/js/3.e286e2c7.chunk.js.map": "/converter-eu/static/js/3.e286e2c7.chunk.js.map",
     "index.html": "/converter-eu/index.html",
-    "static/css/main.61e56d30.chunk.css.map": "/converter-eu/static/css/main.61e56d30.chunk.css.map",
+    "static/css/main.9e8dfb06.chunk.css.map": "/converter-eu/static/css/main.9e8dfb06.chunk.css.map",
     "static/js/2.2a111be2.chunk.js.LICENSE.txt": "/converter-eu/static/js/2.2a111be2.chunk.js.LICENSE.txt",
     "static/media/index.css": "/converter-eu/static/media/doodle.ff74ea4a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2de9c2b0.js",
     "static/js/2.2a111be2.chunk.js",
-    "static/css/main.61e56d30.chunk.css",
+    "static/css/main.9e8dfb06.chunk.css",
     "static/js/main.5608384b.chunk.js"
   ]
 }
