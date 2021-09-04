@@ -4,7 +4,7 @@ import "./style.css";
 const Converter = ({ rate, setRate, getRates, loading, appData, setAppData, savedList, setSavedList, list, setList }) => {
     const onSaveList = (event) => {
         event.preventDefault();
-        if(!loading) {
+        if (!loading) {
             setSavedList([{
                 id: savedList.length ? savedList[0].id + 1 : 0,
                 source: appData.source,
@@ -87,13 +87,13 @@ const Converter = ({ rate, setRate, getRates, loading, appData, setAppData, save
                         {appData.target}
                     </span>
                 </div>
-                {
-                    loading ?
-                        <Loading /> :
-                        <div className="form__element">
+                <div className="form__element">
+                    {
+                        loading ?
+                            <Loading /> :
                             <button className="form__saveButton">Save</button>
-                        </div>
-                }
+                    }
+                </div>
             </form>
         </section>
     );
