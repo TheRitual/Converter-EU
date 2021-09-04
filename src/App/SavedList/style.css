@@ -41,14 +41,6 @@
     background-color: #def0ef;
 }
 
-.savedList__code {
-    color: #FFF;
-    background-color: #305278;
-    font-size: 12px;
-    padding: 5px;
-    border-radius: 10px;
-}
-
 .savedList__value {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;

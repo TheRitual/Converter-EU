@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Controls from "./Controls";
 import Loading from "./Loading";
-import NumCode from "./NumCode";
+import NumCode from "../NumCode";
 import "./style.css";
 
 const Converter = ({ savedList, setSavedList, changeInfo }) => {

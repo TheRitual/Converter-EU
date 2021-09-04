@@ -1,3 +1,4 @@
+import NumCode from "../NumCode";
 import "./style.css"
 
 const SavedList = ({ savedList, setSavedList }) => {
@@ -16,18 +17,10 @@ const SavedList = ({ savedList, setSavedList }) => {
                 {
                     savedList.map(item =>
                         <li className="savedList__item" key={item.id}>
-                            <div>
-                                <span className="savedList__value">{item.sourceValue}</span>&nbsp;
-                                <span className="savedList__code">{item.source}</span>&nbsp;
-                            </div>
+                            <NumCode number={item.sourceValue} code={item.source} small />
                             <div> ➤ </div>
-                            <div>
-                                <span className="savedList__value">{item.targetValue}</span>&nbsp;
-                                <span className="savedList__code">{item.target}</span>&nbsp;
-                            </div>
-                            <div>
-                                <button className="savedList__removeButton" onClick={() => removeItem(item.id)}>&#10006;</button>
-                            </div>
+                            <NumCode number={item.targetValue} code={item.target} small />
+                            <button className="savedList__removeButton" onClick={() => removeItem(item.id)}>&#10006;</button>
                         </li>
                     )
                 }
