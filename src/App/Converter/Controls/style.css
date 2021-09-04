@@ -1,0 +1,48 @@
+.controls__select {
+    font-family: 'Dela Gothic One', cursive;
+    width: 100px;
+    text-align: center;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    color: #305278;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.controls__select:active {
+    background-color: #305278;
+    color: #FFF;
+}
+
+.controls__select:focus {
+    background-color: #305278;
+    color: #FFF;
+}
+
+.controls__field {
+    font-family: 'Dela Gothic One', cursive;
+    width: 250px;
+    text-align: center;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    color: #305278;
+}
+
+.controls__field:active {
+    background-color: #6d93be;
+}
+
+.controls__field:focus {
+    background-color: #6d93be;
+    color: #FFF;
+}
+
+.controls__field:disabled {
+    background-color: #50647a;
+    color: #DDD;
+}

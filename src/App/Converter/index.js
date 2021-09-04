@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import Controls from "./Controls";
 import Loading from "./Loading";
+import NumCode from "./NumCode";
 import "./style.css";
 
 const Converter = ({ savedList, setSavedList, changeInfo }) => {
@@ -108,48 +110,26 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
     }
 
     return (
-            <form className="form" onSubmit={onSaveList}>
-                <div className="form__element">
-                    <input disabled={loading} onChange={onSourceChange} step="any" type="number" value={converterData.sourceValue} min="0" id="source" className="form__field" />
-                    <select className="form__select" value={converterData.source} onChange={onSourceSelect}>{
-                        list.map((item, index) => {
-                            return (
-                                <option key={index} value={item.code}>
-                                    {item.code}
-                                </option>
-                            )
-                        })
-                    }</select>
-                </div>
-                <div className="form__element">
-                    <input disabled={loading} onChange={onTargetChange} step="any" type="number" value={converterData.targetValue} min="0" id="target" className="form__field" />
-                    <select className="form__select" value={converterData.target} onChange={onTargetSelect}>{
-                        list.map((item, index) => {
-                            return (
-                                <option key={index} value={item.code}>
-                                    {item.code}
-                                </option>
-                            )
-                        })
-                    } </select>
-                </div>
-                <div className="form__element">
-                    1&nbsp;<span className="form__code">
-                        {converterData.source}
-                    </span>
-                    &nbsp;=&nbsp;{rate}&nbsp;
-                    <span className="form__code">
-                        {converterData.target}
-                    </span>
-                </div>
-                <div className="form__element">
-                    {
-                        loading ?
-                            <Loading /> :
-                            <button className="form__saveButton">Save</button>
-                    }
-                </div>
-            </form>
+        <form className="converter" onSubmit={onSaveList}>
+            <div className="converter__element">
+                <Controls isDisabled={loading} inputValue={converterData.sourceValue} inputOnChange={onSourceChange} selectValue={converterData.source} selectOnChange={onSourceSelect} list={list} />
+            </div>
+            <div className="converter__element">
+                <Controls isDisabled={loading} inputValue={converterData.targetValue} inputOnChange={onTargetChange} selectValue={converterData.target} selectOnChange={onTargetSelect} list={list} />
+            </div>
+            <div className="converter__element">
+                <NumCode number="1" code={converterData.source} />
+                &nbsp;=&nbsp;
+                <NumCode number={rate} code={converterData.target} />
+            </div>
+            <div className="converter__element">
+                {
+                    loading ?
+                        <Loading /> :
+                        <button className="converter__saveButton">Save</button>
+                }
+            </div>
+        </form>
     );
 }
 
