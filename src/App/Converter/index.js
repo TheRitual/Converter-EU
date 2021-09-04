@@ -12,13 +12,10 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
         sourceValue: 21.37,
         targetValue: 21.37,
     });
-
     const [rate, setRate] = useState(21.37);
-
     const [loading, setLoading] = useState(true);
-
     const [list, setList] = useState([]);
-
+    
     const createList = (list) => {
         return Object.entries(list).map(item => {
             return { code: item[0], rate: item[1] }
