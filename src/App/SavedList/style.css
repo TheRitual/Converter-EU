@@ -6,6 +6,8 @@
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 10px 10px #00000099;
+    margin-bottom: 100px;
+    transition: 1s;
 }
 
 .savedList__header {

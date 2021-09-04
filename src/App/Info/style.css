@@ -8,16 +8,12 @@
     left: 10%;
     bottom: 0;
     opacity: 1;
-    transition: 0.7s;
-}
-
-.info--hidden {
-    opacity: 0;
+    transition: 1s;
 }
 
 @media(max-width: 767px) {
     .info {
-        width: 80%;
+        width: 100%;
         left: 0;
     }
 }

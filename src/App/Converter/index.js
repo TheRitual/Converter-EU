@@ -2,12 +2,12 @@ import Form from "./Form";
 import Loading from "./Loading";
 import "./style.css";
 
-const Converter = ({ appData, setAppData, savedList, setSavedList }) => {
+const Converter = ({ rate, setRate, getRates, loading, appData, setAppData, savedList, setSavedList, list, setList }) => {
 
     return (
         <section className="converter">
             <h2 className="converter__header">Converter</h2>
-            {appData.isLoading ? <Loading /> : <Form appData={appData} setAppData={setAppData} savedList={savedList} setSavedList={setSavedList} />}
+            {loading ? <Loading /> : <Form rate={rate} getRates={getRates} setRate={setRate} appData={appData} setAppData={setAppData} savedList={savedList} setSavedList={setSavedList} list={list} setList={setList} />}
         </section>
     );
 }

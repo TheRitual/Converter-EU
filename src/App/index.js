@@ -9,19 +9,13 @@ const App = () => {
   const [info, setInfo] = useState({
     message: "Downloading information about exchange rates",
     isError: false,
-    showInfo: true,
   });
 
-  const showInfo = (information, error) => {
+  const changeInfo = (information, error) => {
     setInfo({
       message: information,
       isError: error,
-      showInfo: true,
     });
-  }
-
-  const hideInfo = () => {
-    setInfo({ ...info, showInfo: false });
   }
 
   const [savedList, setSavedList] = useState([]);
@@ -31,38 +25,50 @@ const App = () => {
     target: "PLN",
     sourceValue: 21.37,
     targetValue: 21.37,
-    rate: 21.37,
-    isLoading: true,
   });
 
-  const showLoading = () => {
-    setAppData({ ...appData, isLoading: true });
-  }
+  const [rate, setRate] = useState(21.37);
 
-  const hideLoading = () => {
-    setAppData({ ...appData, isLoading: false });
-  }
+  const [loading, setLoading] = useState(true);
 
   const [list, setList] = useState([]);
 
+  const createList = (list) => {
+    return Object.entries(list).map(item => {
+      return { code: item[0], rate: item[1] }
+    });
+  }
+
   const getRates = (currency) => {
-    showInfo("Obtaining rates for " + currency, false);
+    setLoading(true);
+    changeInfo("Obtaining rates for " + currency, false);
     fetch("https://api.exchangerate.host/latest?base=" + currency)
       .then(response => {
-        showInfo("Done", false);
         return response.json()
       })
-      .then(list => {
-        console.log(list);
-        setList(list.rates);
-        hideInfo();
-        hideLoading();
+      .then(currencyList => {
+        changeInfo("I am ready to use!", false);
+        setList(createList(currencyList.rates));
+        setLoading(false);
       })
       .catch(error => {
-        showInfo("Can't obtain rates for " + currency + ". Check console for more information.", true);
+        changeInfo("Can't obtain rates for " + currency + ". Check console for more information.", true);
         console.error(error);
+        setTimeout(() => getRates(appData.source), 5000);
       });
   }
+
+  useEffect(() => {
+    if (list.length > 0) {
+      const newRate = list.find(item => item.code === appData.target).rate;
+      setRate(newRate);
+      setAppData({
+        ...appData,
+        targetValue: appData.sourceValue * newRate,
+      });
+    }
+    // eslint-disable-next-line
+  }, [list])
 
   useEffect(() => {
     getRates("EUR");
@@ -74,7 +80,7 @@ const App = () => {
       <main className="main">
         <Header />
         <section className="container">
-          <Converter appData={appData} setAppData={setAppData} savedList={savedList} setSavedList={setSavedList} />
+          <Converter rate={rate} loading={loading} setRate={setRate} getRates={getRates} appData={appData} setAppData={setAppData} savedList={savedList} setSavedList={setSavedList} list={list} setList={setList} />
           <SavedList savedList={savedList} setSavedList={setSavedList} />
         </section>
       </main>
