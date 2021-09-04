@@ -10,8 +10,7 @@ const SavedList = ({ savedList, setSavedList }) => {
     }
 
     return (
-        <section className="savedList">
-            <h2 className="savedList__header">Saved Positions</h2>
+        <>
             <button className="savedList__clearButton" onClick={clearList}>Clear List</button>
             <ul className="savedList__list">
                 {
@@ -33,7 +32,7 @@ const SavedList = ({ savedList, setSavedList }) => {
                     )
                 }
             </ul>
-        </section>
+        </>
     );
 }
 

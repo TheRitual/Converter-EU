@@ -108,8 +108,6 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
     }
 
     return (
-        <section className="converter">
-            <h2 className="converter__header">Converter</h2>
             <form className="form" onSubmit={onSaveList}>
                 <div className="form__element">
                     <input disabled={loading} onChange={onSourceChange} step="any" type="number" value={converterData.sourceValue} min="0" id="source" className="form__field" />
@@ -152,7 +150,6 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
                     }
                 </div>
             </form>
-        </section>
     );
 }
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Converter from "./Converter";
+import Section from "./Section";
 import SavedList from "./SavedList";
 import Header from "./Header";
 import Info from "./Info";
@@ -25,8 +26,12 @@ const App = () => {
       <main className="main">
         <Header />
         <section className="container">
-          <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
-          <SavedList savedList={savedList} setSavedList={setSavedList} />
+          <Section title="Converter">
+            <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
+          </Section>
+          <Section title="Saved List">
+            <SavedList savedList={savedList} setSavedList={setSavedList} />
+          </Section>
         </section>
       </main>
       <Info info={info} />

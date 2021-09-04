@@ -1,0 +1,23 @@
+
+.section {
+    width: fit-content;
+    text-align: center;
+    font-size: 20px;
+    color: #305278;
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px #00000099;
+    margin: 0 20px 100px 20px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        margin: 0 0 20px 0;
+    }
+}
+
+.section__header {
+    margin: 0 auto;
+    padding: 20px;
+}
