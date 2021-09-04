@@ -12,6 +12,12 @@
     margin: 0 20px 100px 20px;
 }
 
+@media (max-width: 767px) {
+    .converter {
+        margin: 0 0 20px 0;
+    }
+}
+
 .converter__header {
     margin: 0 auto;
     padding: 20px;
@@ -19,6 +25,14 @@
 
 .form__element {
     padding: 10px;
+    border-bottom: 3px dotted #FFF;
+    transition: 1s;
+}
+
+@media (max-width: 767px) {
+    .form__element {
+        border-bottom-color: #DEF;
+    }
 }
 
 .form__select {
@@ -32,6 +46,7 @@
     color: #305278;
     font-size: 16px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .form__select:active {
