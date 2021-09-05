@@ -1,7 +1,6 @@
 import "./style.css";
 
 const Info = ({ info }) => {
-
     return (
         <section className="info">
             <p className={`info__information${info.isError ? " info__information--error" : ""}`}>

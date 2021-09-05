@@ -4,6 +4,7 @@ import Section from "./Section";
 import SavedList from "./SavedList";
 import Header from "./Header";
 import Info from "./Info";
+import { useLocalStorageState } from "./utils/useLocalStorageState";
 import "./style.css";
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
     });
   }
 
-  const [savedList, setSavedList] = useState([]);
+  const [savedList, setSavedList] = useLocalStorageState("saveList",[]);
 
   return (
     <>

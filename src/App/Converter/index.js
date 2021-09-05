@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Controls from "./Controls";
 import Loading from "./Loading";
 import NumCode from "../NumCode";
+import Clock from "./Clock";
 import "./style.css";
 
 const Converter = ({ savedList, setSavedList, changeInfo }) => {
@@ -15,7 +16,8 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
     const [rate, setRate] = useState(21.37);
     const [loading, setLoading] = useState(true);
     const [list, setList] = useState([]);
-    
+    const [appDate, setAppDate] = useState(new Date());
+
     const createList = (list) => {
         return Object.entries(list).map(item => {
             return { code: item[0], rate: item[1] }
@@ -56,6 +58,15 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
     useEffect(() => {
         getRates("EUR");
         // eslint-disable-next-line
+    }, []);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setAppDate(new Date());
+        }, 100);
+        return () => {
+            clearInterval(intervalId);
+        };
     }, []);
 
     const onSaveList = (event) => {
@@ -108,6 +119,7 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
 
     return (
         <form className="converter" onSubmit={onSaveList}>
+            <Clock dateValue={appDate} />
             <div className="converter__element">
                 <Controls isDisabled={loading} inputValue={converterData.sourceValue} inputOnChange={onSourceChange} selectValue={converterData.source} selectOnChange={onSourceSelect} list={list} />
             </div>
@@ -120,6 +132,7 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
                 <NumCode number={rate} code={converterData.target} />
             </div>
             <div className="converter__element">
+
                 {
                     loading ?
                         <Loading /> :
