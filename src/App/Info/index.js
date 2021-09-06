@@ -1,13 +1,13 @@
-import "./style.css";
+import { StyledInfo, Information } from "./styled";
 
 const Info = ({ info }) => {
     return (
-        <section className="info">
-            <p className={`info__information${info.isError ? " info__information--error" : ""}`}>
+        <StyledInfo>
+            <Information isError={info.isError}>
                 {info.isError && "ERROR: "}
                 {info.message}
-            </p>
-        </section >
+            </Information>
+        </StyledInfo >
     );
 }
 

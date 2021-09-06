@@ -1,5 +1,5 @@
 import NumCode from "../NumCode";
-import "./style.css"
+import { FunctionalButton, RemoveButton, List, ListItem } from "./styled";
 
 const SavedList = ({ savedList, setSavedList }) => {
     const removeItem = (id) => {
@@ -12,19 +12,19 @@ const SavedList = ({ savedList, setSavedList }) => {
 
     return (
         <>
-            <button className="savedList__clearButton" onClick={clearList}>Clear List</button>
-            <ul className="savedList__list">
+            <FunctionalButton onClick={clearList}>Clear List</FunctionalButton>
+            <List>
                 {
                     savedList.map(item =>
-                        <li className="savedList__item" key={item.id}>
+                        <ListItem key={item.id}>
                             <NumCode number={item.sourceValue} code={item.source} small />
                             <div> ➤ </div>
                             <NumCode number={item.targetValue} code={item.target} small />
-                            <button className="savedList__removeButton" onClick={() => removeItem(item.id)}>&#10006;</button>
-                        </li>
+                            <RemoveButton onClick={() => removeItem(item.id)}>&#10006;</RemoveButton>
+                        </ListItem>
                     )
                 }
-            </ul>
+            </List>
         </>
     );
 }

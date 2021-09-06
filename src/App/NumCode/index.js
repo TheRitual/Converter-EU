@@ -1,11 +1,13 @@
-import "./style.css";
+import { CodeValue, Code } from "./styled";
 
 const NumCode = ({ number, code, small }) => (
     <>
-        <span className={"code__value" + (small ? " code__value--small" : "")}>{number}</span>&nbsp;
-        <span className={"code " + (small ? "code--small" : "code--large")}>
+        <CodeValue isSmall={small}>
+            {number}
+        </CodeValue>&nbsp;
+        <Code isSmall={small}>
             {code}
-        </span>
+        </Code>
     </>
 );
 

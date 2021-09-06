@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledClock } from "./styled";
 
 const formatDate = (date) => date.toLocaleDateString(undefined, {
     month: "numeric",
@@ -12,9 +12,9 @@ const formatDate = (date) => date.toLocaleDateString(undefined, {
 
 const Clock = ({ dateValue }) => {
     return (
-        <section className="clock">
+        <StyledClock>
             {formatDate(dateValue)}
-        </section>
+        </StyledClock>
     );
 }
 

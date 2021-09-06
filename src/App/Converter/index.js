@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Controls from "./Controls";
 import Loading from "./Loading";
 import NumCode from "../NumCode";
-import "./style.css";
+import { ConverterElement, ConverterButton } from "./styled";
 
 const Converter = ({ savedList, setSavedList, changeInfo }) => {
 
@@ -109,26 +109,25 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
     }
 
     return (
-        <form className="converter" onSubmit={onSaveList}>
-            <div className="converter__element">
+        <form onSubmit={onSaveList}>
+            <ConverterElement>
                 <Controls isDisabled={loading} inputValue={converterData.sourceValue} inputOnChange={onSourceChange} selectValue={converterData.source} selectOnChange={onSourceSelect} list={list} />
-            </div>
-            <div className="converter__element">
+            </ConverterElement>
+            <ConverterElement>
                 <Controls isDisabled={loading} inputValue={converterData.targetValue} inputOnChange={onTargetChange} selectValue={converterData.target} selectOnChange={onTargetSelect} list={list} />
-            </div>
-            <div className="converter__element">
+            </ConverterElement>
+            <ConverterElement>
                 <NumCode number="1" code={converterData.source} />
                 &nbsp;=&nbsp;
                 <NumCode number={rate} code={converterData.target} />
-            </div>
-            <div className="converter__element">
-
+            </ConverterElement>
+            <ConverterElement>
                 {
                     loading ?
                         <Loading /> :
-                        <button className="converter__saveButton">Save</button>
+                        <ConverterButton className="converter__saveButton">Save</ConverterButton>
                 }
-            </div>
+            </ConverterElement>
         </form>
     );
 }

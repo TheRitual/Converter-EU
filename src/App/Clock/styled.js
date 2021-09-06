@@ -1,4 +1,6 @@
-.clock {
+import styled from "styled-components";
+
+export const StyledClock = styled.section`
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,4 +8,4 @@
     color: #305278;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-}
+`;

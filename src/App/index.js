@@ -6,7 +6,7 @@ import Header from "./Header";
 import Info from "./Info";
 import Clock from "./Clock";
 import { useLocalStorageState } from "./utils/useLocalStorageState";
-import "./style.css";
+import { Container, Main } from "./styled";
 
 const App = () => {
   const [savedList, setSavedList] = useLocalStorageState("saveList", []);
@@ -33,20 +33,18 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <main className="main">
-        <Header />
-        <section className="container">
-          <Section title="Converter" preContent={<Clock dateValue={appDate} />}>
-            <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
-          </Section>
-          <Section title="Saved List">
-            <SavedList savedList={savedList} setSavedList={setSavedList} />
-          </Section>
-        </section>
-      </main>
+    <Main>
+      <Header />
+      <Container>
+        <Section title="Converter" preContent={<Clock dateValue={appDate} />}>
+          <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
+        </Section>
+        <Section title="Saved List">
+          <SavedList savedList={savedList} setSavedList={setSavedList} />
+        </Section>
+      </Container>
       <Info info={info} />
-    </>
+    </Main>
   );
 }
 

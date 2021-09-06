@@ -1,5 +1,11 @@
-import "./style.css";
+import { LoadingGrid, LoadingDot } from "./styled";
 
-const Loading = () => (<div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>);
+const Loading = () => (
+    <LoadingGrid>
+        <LoadingDot/><LoadingDot/><LoadingDot/>
+        <LoadingDot/><LoadingDot/><LoadingDot/>
+        <LoadingDot/><LoadingDot/><LoadingDot/>
+    </LoadingGrid>
+);
 
 export default Loading;

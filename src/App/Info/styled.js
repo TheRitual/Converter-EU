@@ -1,7 +1,7 @@
-/* info.css */
+import styled, { css } from "styled-components";
 
-.info {
-    text-align: center;
+export const StyledInfo = styled.section`
+text-align: center;
     width: 80%;
     margin: 0 auto;
     position: fixed;
@@ -9,16 +9,13 @@
     bottom: 0;
     opacity: 1;
     transition: 1s;
-}
-
-@media(max-width: 767px) {
-    .info {
-        width: 100%;
+    @media(max-width: 767px) {
+       width: 100%;
         left: 0;
     }
-}
+`;
 
-.info__information {
+export const Information = styled.p`
     margin: 0;
     height: 40px;
     background-color: #FFF;
@@ -29,8 +26,7 @@
     border-radius: 20px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
-
-.info__information--error {
-    color: hsl(0, 100%, 30%);
-}
+    ${({ isError }) => isError && css`
+        color: hsl(0, 100 %, 30 %);
+    `}
+`;

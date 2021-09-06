@@ -1,11 +1,11 @@
-import "./style.css";
+import { StyledSection, SectionHeader } from "./styled";
 
 const Section = ({ title, children, preContent }) => (
-    <section className="section">
+    <StyledSection>
         {preContent ? preContent : ""}
-        <h2 className="section__header">{title}</h2>
+        <SectionHeader>{title}</SectionHeader>
         {children}
-    </section>
+    </StyledSection>
 );
 
 export default Section;

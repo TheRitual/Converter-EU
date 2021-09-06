@@ -1,9 +1,9 @@
-import "./style.css";
+import { HeaderText } from "./styled";
 
 const Header = () => {
     return (
         <header>
-            <h1 className="header__header">React EU Converter</h1>
+            <HeaderText>React EU Converter</HeaderText>
         </header>
     );
 }
