@@ -2,7 +2,7 @@
 
 Currency exchange app fetching current values from API
 
-![screenshot](https://theritual.github.io/converter-eu/preview.jpg)
+![screenshot](https://theritual.github.io/converter-eu/new_screen.jpg)
 
 LINK:
 https://theritual.github.io/converter-eu/

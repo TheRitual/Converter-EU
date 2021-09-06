@@ -58,8 +58,6 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
         // eslint-disable-next-line
     }, []);
 
-
-
     const onSaveList = (event) => {
         event.preventDefault();
         if (!loading) {
