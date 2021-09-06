@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Controls from "./Controls";
 import Loading from "./Loading";
 import NumCode from "../NumCode";
+import axios from "axios";
 import { ConverterElement, ConverterButton } from "./styled";
 
 const Converter = ({ savedList, setSavedList, changeInfo }) => {
@@ -25,13 +26,11 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
     const getRates = (currency) => {
         setLoading(true);
         changeInfo("Obtaining rates for " + currency, false);
-        fetch("https://api.exchangerate.host/latest?base=" + currency)
-            .then(response => {
-                return response.json()
-            })
+
+        axios.get("https://api.exchangerate.host/latest?base=" + currency)
             .then(currencyList => {
                 changeInfo("I am ready to use!", false);
-                setList(createList(currencyList.rates));
+                setList(createList(currencyList.data.rates));
                 setLoading(false);
             })
             .catch(error => {

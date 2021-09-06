@@ -28,7 +28,7 @@ export const LoadingDot = styled.div`
     width: 16px;
     height: 16px;
     background: ${({theme}) => theme.colors.primary};
-    animation: ${loadGridAnimation} 1.2s linear infinite;
+    animation: ${loadGridAnimation} 2s linear infinite;
     &:nth-child(1) {
         top: 8px;
         left: 8px;
