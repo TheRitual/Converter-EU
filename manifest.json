@@ -1,8 +1,7 @@
 {
   "short_name": "React EU Converter",
   "name": "EU Converter",
-  "icons": [
-    {
+  "icons": [{
       "src": "icon.png",
       "type": "image/png",
       "sizes": "192x192"
@@ -10,7 +9,7 @@
     {
       "src": "screen.jpg",
       "type": "image/jpg",
-      "sizes": "1299x768"
+      "sizes": "1858x977"
     }
   ],
   "start_url": ".",
