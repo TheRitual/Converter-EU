@@ -4,8 +4,8 @@ export const StyledSection = styled.section`
     width: fit-content;
     text-align: center;
     font-size: 20px;
-    color: #305278;
-    background-color: #FFF;
+    color: ${({theme}) => theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.background};
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 10px 10px #00000099;

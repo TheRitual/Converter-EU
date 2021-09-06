@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const ConverterElement = styled.div`
-    padding: 10px;
-    border-bottom: 3px dotted #FFF;
+    padding: 15px 0 ;
+    border-bottom: 3px dotted ${({ theme }) => theme.colors.background};;
     transition: 1s;
     @media (max-width: 767px) {
-        border-bottom-color: #DEF;
+        filter: drop-shadow(0px 3px 3px ${({ theme }) => theme.colors.primaryLight});
     }
-`;
+    `;
 
 export const ConverterButton = styled.button`
     display: block;
@@ -16,12 +16,12 @@ export const ConverterButton = styled.button`
     border: 2px solid;
     border-radius: 10px;
     padding: 7px;
-    color: #305278;
-    background-color: hsl(179, 100%, 98%);
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.background};
     transition: 0.3s;
     &:hover {
-        background-color: #4c85c5;
-        color: #FFF;
+        background-color: ${({theme}) => theme.colors.primaryLight};
+        color: ${({ theme }) => theme.colors.background};
         transform: scale(1.2);
         cursor: pointer;
     }

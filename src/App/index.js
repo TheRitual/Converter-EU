@@ -7,6 +7,8 @@ import Info from "./Info";
 import Clock from "./Clock";
 import { useLocalStorageState } from "./utils/useLocalStorageState";
 import { Container, Main } from "./styled";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme"
 
 const App = () => {
   const [savedList, setSavedList] = useLocalStorageState("saveList", []);
@@ -33,18 +35,20 @@ const App = () => {
   }, []);
 
   return (
-    <Main>
-      <Header />
-      <Container>
-        <Section title="Converter" preContent={<Clock dateValue={appDate} />}>
-          <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
-        </Section>
-        <Section title="Saved List">
-          <SavedList savedList={savedList} setSavedList={setSavedList} />
-        </Section>
-      </Container>
-      <Info info={info} />
-    </Main>
+    <ThemeProvider theme={theme}>
+      <Main>
+        <Header />
+        <Container>
+          <Section title="Converter" preContent={<Clock dateValue={appDate} />}>
+            <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
+          </Section>
+          <Section title="Saved List">
+            <SavedList savedList={savedList} setSavedList={setSavedList} />
+          </Section>
+        </Container>
+        <Info info={info} />
+      </Main>
+    </ThemeProvider>
   );
 }
 

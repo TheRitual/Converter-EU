@@ -7,18 +7,18 @@ export const ControlSelect = styled.select`
     border: #000 solid 2px;
     border-radius: 10px;
     padding: 10px;
-    background-color: #FFF;
-    color: #305278;
+    background-color: ${({theme}) => theme.colors.background};
+    color: ${({theme}) => theme.colors.primary};
     font-size: 16px;
     margin-left: 10px;
     margin-top: 10px;
     &:active {
-        background-color: #305278;
-        color: #FFF;
+        background-color: ${({theme}) => theme.colors.primary};
+        color: ${({theme}) => theme.colors.background};
     }   
     &:focus {
-        background-color: #305278;
-        color: #FFF;
+        background-color: ${({theme}) => theme.colors.primary};
+        color: ${({theme}) => theme.colors.background};
     }
 `;
 
@@ -29,14 +29,14 @@ export const ControlInput = styled.input`
     border: #000 solid 2px;
     border-radius: 10px;
     padding: 10px;
-    background-color: #FFF;
-    color: #305278;
+    background-color: ${({theme}) => theme.colors.background};
+    color: ${({theme}) => theme.colors.primary};
     &:active {
-        background-color: #6d93be;
+        background-color: ${({theme}) => theme.colors.primaryLight};
     }
     &:focus {
-        background-color: #6d93be;
-        color: #FFF;
+        background-color: ${({theme}) => theme.colors.primaryLight};
+        color: ${({theme}) => theme.colors.background};
     }
     &:disabled {
         background-color: #50647a;

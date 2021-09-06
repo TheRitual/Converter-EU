@@ -14,20 +14,21 @@ export const ListItem = styled.li`
     flex-wrap: nowrap;
     justify-content: center;
     align-items: baseline;
-    color: #000;
-    border-bottom: 1px #CCC solid;
-    border-top: 1px #AAA solid;
+    color: ${({theme}) => theme.colors.dark};
     padding: 7px;
     margin: auto;
     line-height: 2.3;
+    transition: 0.2s;
+    cursor: default ;
+    filter: drop-shadow(0px -1px 0px ${({theme}) => theme.colors.primaryLight});
     &:hover {
-        background-color: #def0ef;
+        filter: drop-shadow(0px 3px 3px ${({theme}) => theme.colors.primaryLight});
     }
 `;
 
 export const FunctionalButton = styled.button`
     font-family: 'Roboto', sans-serif;
-    color: rgb(92, 35, 35);
+    color: ${({theme}) => theme.colors.error};
     background-color: transparent;
     font-size: 18px;
     padding: 8px;
@@ -38,12 +39,12 @@ export const FunctionalButton = styled.button`
     &:hover {
         transform: scale(1.1);
         cursor: pointer;
-        color: #000;
+        color: ${({theme}) => theme.colors.dark};
     }
 `;
 
 export const RemoveButton = styled.button`
-    color: rgb(92, 35, 35);
+    color: ${({theme}) => theme.colors.error};
     background-color: rgba(92, 35, 35, 0.219);
     font-size: 15px;
     padding: 8px;

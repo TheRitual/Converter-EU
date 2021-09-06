@@ -9,8 +9,8 @@ export const CodeValue = styled.span`
 `;
 
 export const Code = styled.span`
-    color: #fff;
-    background-color: #305278;
+    color: ${({theme}) => theme.colors.background};
+    background-color: ${({theme}) => theme.colors.primary};
     padding: 7px;
     font-size: 14px;
     border-radius: 15px;

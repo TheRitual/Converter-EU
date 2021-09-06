@@ -5,7 +5,7 @@ export const StyledClock = styled.section`
     padding: 0;
     width: 100%;
     text-align: right;
-    color: #305278;
+    color: ${({theme}) => theme.colors.primary};
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 `;

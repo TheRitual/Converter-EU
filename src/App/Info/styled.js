@@ -18,8 +18,8 @@ text-align: center;
 export const Information = styled.p`
     margin: 0;
     height: 40px;
-    background-color: #FFF;
-    color: #305278;
+    background-color: ${({theme}) => theme.colors.background};
+    color: ${({theme}) => theme.colors.primary};
     padding: 10px;
     border: 2px solid #000;
     border-bottom: 0px;
@@ -27,6 +27,6 @@ export const Information = styled.p`
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     ${({ isError }) => isError && css`
-        color: hsl(0, 100 %, 30 %);
+        color: ${({theme}) => theme.colors.error};
     `}
 `;
