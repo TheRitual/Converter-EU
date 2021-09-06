@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Converter from "./Converter";
 import Section from "./Section";
 import SavedList from "./SavedList";
@@ -8,11 +8,11 @@ import Clock from "./Clock";
 import { useLocalStorageState } from "./utils/useLocalStorageState";
 import { Container, Main } from "./styled";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme"
+import { theme } from "./utils/theme"
+import { useCurrentDate } from "./utils/useCurrentDate";
 
 const App = () => {
   const [savedList, setSavedList] = useLocalStorageState("saveList", []);
-  const [appDate, setAppDate] = useState(new Date());
   const [info, setInfo] = useState({
     message: "Downloading information about exchange rates",
     isError: false,
@@ -25,21 +25,14 @@ const App = () => {
     });
   }
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setAppDate(new Date());
-    }, 1000);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+  const time = useCurrentDate();
 
   return (
     <ThemeProvider theme={theme}>
       <Main>
         <Header />
         <Container>
-          <Section title="Converter" preContent={<Clock dateValue={appDate} />}>
+          <Section title="Converter" preContent={<Clock dateValue={time} />}>
             <Converter savedList={savedList} setSavedList={setSavedList} changeInfo={changeInfo} />
           </Section>
           <Section title="Saved List">

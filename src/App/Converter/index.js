@@ -51,7 +51,7 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
             });
         }
         // eslint-disable-next-line
-    }, [list])
+    }, [list]);
 
     useEffect(() => {
         getRates("EUR");
