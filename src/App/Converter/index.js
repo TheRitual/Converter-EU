@@ -101,7 +101,7 @@ const Converter = ({ savedList, setSavedList, changeInfo }) => {
         setConverterData({
             ...converterData,
             target: target.value,
-            sourceValue: Number(converterData.targetValue / newRate).toFixed(2),
+            targetValue: Number(converterData.sourceValue * newRate).toFixed(2),
         });
     }
 
