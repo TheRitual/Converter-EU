@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/converter-eu/static/js/main.e95e31b4.chunk.js",
-    "main.js.map": "/converter-eu/static/js/main.e95e31b4.chunk.js.map",
-    "runtime-main.js": "/converter-eu/static/js/runtime-main.f144cd0e.js",
-    "runtime-main.js.map": "/converter-eu/static/js/runtime-main.f144cd0e.js.map",
-    "static/js/2.50dd9aca.chunk.js": "/converter-eu/static/js/2.50dd9aca.chunk.js",
-    "static/js/2.50dd9aca.chunk.js.map": "/converter-eu/static/js/2.50dd9aca.chunk.js.map",
-    "static/js/3.0eb7f373.chunk.js": "/converter-eu/static/js/3.0eb7f373.chunk.js",
-    "static/js/3.0eb7f373.chunk.js.map": "/converter-eu/static/js/3.0eb7f373.chunk.js.map",
-    "index.html": "/converter-eu/index.html",
-    "static/js/2.50dd9aca.chunk.js.LICENSE.txt": "/converter-eu/static/js/2.50dd9aca.chunk.js.LICENSE.txt",
-    "static/media/doodle.ff74ea4a.jpg": "/converter-eu/static/media/doodle.ff74ea4a.jpg"
+    "main.js": "/Converter-EU/static/js/main.e95e31b4.chunk.js",
+    "main.js.map": "/Converter-EU/static/js/main.e95e31b4.chunk.js.map",
+    "runtime-main.js": "/Converter-EU/static/js/runtime-main.6c03ca51.js",
+    "runtime-main.js.map": "/Converter-EU/static/js/runtime-main.6c03ca51.js.map",
+    "static/js/2.c027da37.chunk.js": "/Converter-EU/static/js/2.c027da37.chunk.js",
+    "static/js/2.c027da37.chunk.js.map": "/Converter-EU/static/js/2.c027da37.chunk.js.map",
+    "static/js/3.0eb7f373.chunk.js": "/Converter-EU/static/js/3.0eb7f373.chunk.js",
+    "static/js/3.0eb7f373.chunk.js.map": "/Converter-EU/static/js/3.0eb7f373.chunk.js.map",
+    "index.html": "/Converter-EU/index.html",
+    "static/js/2.c027da37.chunk.js.LICENSE.txt": "/Converter-EU/static/js/2.c027da37.chunk.js.LICENSE.txt",
+    "static/media/doodle.ff74ea4a.jpg": "/Converter-EU/static/media/doodle.ff74ea4a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f144cd0e.js",
-    "static/js/2.50dd9aca.chunk.js",
+    "static/js/runtime-main.6c03ca51.js",
+    "static/js/2.c027da37.chunk.js",
     "static/js/main.e95e31b4.chunk.js"
   ]
 }
